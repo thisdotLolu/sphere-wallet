@@ -1,0 +1,13 @@
+{
+  "name": "Sphere Wallet",
+  "version": "1.0.0",
+  "description": "Eth wallet Extension",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open Wallet"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

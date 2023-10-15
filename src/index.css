@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*{
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ant-divider {
+  margin-bottom: 2px !important;
+}
+
+.ant-tabs-nav-wrap {
+  justify-content: center !important;
+}
+
+
+.progress{
+  display: flex;
+}
+
+.progress div{
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 3px;
+  width:40px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+}
+
+.progressed{
+  background-color:#ffff;
+}
+
+button{
+  border: 1px solid red;
+  width: 100%;
+  height: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  background-color: #343663;
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.4);
+  font-weight: bolder;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  /* font-family: Space F=; */
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid #343663;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+/* .progress */
+
+
+/* create account */
+.create-account{
+  padding: 20px;
+  position: relative;
+}
+.create-account h3{
+  color:white;
+  font-size: 2rem;
+  margin: 20px 0px;
+}
+
+.create-account h4{
+  color:white;
+  font-size: 1.5rem;
+  margin: 20px 0px;
+}
+
+input{
+  background-color: #343663;
+  margin: 10px 0px;
+  padding: 15px;
+  border: none;
+  width: 100%;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+select{
+  background-color: #343663;
+  margin: 10px 0px;
+  padding: 20px 20px;
+  /* padding-left: ; */
+  border: none;
+  width: 100%;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+  outline: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+
+.create-account input::placeholder{
+  color:#9A9A9A;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.passwordError{
+  color: red;
+  font-size: .7rem;
+}
+
+.agree{
+  display: flex;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.agree input{
+  width: 15px;
+}
+
+.agree p{
+  width:100%;
+  font-size:1rem;
+  text-align: start;
+  margin-left: 15px;
+}
+
+
+/* .back-up */
+
+.back-up{
+  padding: 20px;
+}
+
+.back-up h3{
+  margin: 20px 0px;
+  font-size: 2rem;
+  color: white;
+}
+
+.back-up .instruction{
+  color: white;
+  margin: 20px 0px;
+}
+
+.back-up .seed-phrase-container{
+  width:100%;
+  background-color: #EAE7E7;
+  border-radius: 10px;
+  height: 100px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+  padding: 20px;
+}
+
+
+.back-up .copy{
+  display: flex;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.back-up button{
+  margin: 20px 0px;
+}
+
+/* modal */
+.modal-container{
+  position: fixed;
+  top:5px;
+  color: white;
+  padding: 5px;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+
+.slide-in {
+  animation: slideFromTop 3.5s ease-in-out forwards;
+  transform: translateY(-100%);
+}
+
+.slide-out {
+  animation: slideFromTopOut 3.5s ease-in-out forwards;
+  transform: translateY(0);
+}
+
+@keyframes slideFromTop {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromTopOut {
+  to {
+    transform: translateY(-150%);
+  }
+}
+
+.loader{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000000;
+}
+
+
+
+/* sign in */
+.sign-in{
+  padding: 20px;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sign-in h2{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2.3rem;
+}
+
+.sign-in input{
+  background-color: #343663;
+  margin: 10px 0px;
+  padding: 15px;
+  border: none;
+  width: 100%;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+  outline: none;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+
+/* wallet view */
+.wallet-view{
+  color: white;
+  width: 350px;
+  height: 600px;
+}
+
+
+.wallet-view .chains{
+  display: flex;
+  right: 0;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.wallet-view .chains img{
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.wallet-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wallet-details h4{
+  margin: 10px 0px;
+}
+.wallet-details h1{
+  margin: 10px 0px;
+}
+
+.wallet-view .action-buttons{
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.wallet-view .action-buttons button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; 
+}
+
+.ant-tabs-tab{
+  color: white !important
+}
+
+.ant-tabs-tab-btn{
+  color: white !important
+}
+
+.ant-tabs-tab-active{
+  color: white !important; 
+  font-weight: 900;
+}
+
+.ant-tabs-tab:hover{
+  color: white !important; 
+  font-weight: 900;
+}
+
+.ant-tabs-ink-bar {
+  border-bottom: 3px solid white;
+}
+
+
+.tokensList-container{
+  color: white;
+  height: 250px;
+  width:100%; 
+  padding:3px; 
+}
+.tokensList{
+  color: white;
+  height:160px;
+  overflow: auto;
+}
+
+.wallet-view-info{
+  padding: 5px;
+  height: 300px;
+}
+
+/* import token */
+
+
+
+.add-token{
+  position: relative;
+  color: white;
+  padding: 20px;
+}
+
+.arrowBack{
+  color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.add-token h2{
+  color: white;
+  margin:30px 0;
+}
+
+.add-token label{
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.add-token input{
+  width:100%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.token-added-details{
+  margin-top: 40px;
+}
+
+.tokensList::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 20px;
+}
+
+.tokensList::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 20px;
+}
+ 
+/* Handle */
+.tokensList::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.tokensList::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.ant-list-item-meta-description,.ant-list-item-meta-title{
+  color: white !important
+}
+
+
+
+/* recover account */
+.recover-account{
+  padding: 20px;
+  color:white;
+}
+
+.recover-account h1{
+  margin-bottom: 40px;
+}
+
+.recover-account .inputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.recover-account .inputs input{
+  width: 70px;
+  text-align: center;
+  padding: 5px;
+}
+
+.recover-account .inputs label{
+  margin: 6px;
+}
+
+/* send token */
+
+.send-token{
+  position: relative;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.send-token label{
+  margin:20px 0px;
+}
+
+.send-token button{
+  justify-self: flex-end;
+  margin-top: 100px;
+}
+
+
+/* buy */
+.buy{
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  color: white;
+}
+
+.buy p{
+  margin: 20px 0px;
+}
